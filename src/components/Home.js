@@ -15,7 +15,7 @@ function Home() {
         <div className="flex flex-col items-center gap-4">
   <div className="space-x-4">
     <Link
-      to="/projects"
+      to="/experience"
       className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition-colors"
     >
       View My Work
