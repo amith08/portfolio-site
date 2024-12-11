@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import resumePDF from '../Resource/AMITH HEGDE.pdf';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,12 +23,19 @@ function Navbar() {
             <Link to="/about" className="text-gray-600 hover:text-primary transition-colors">
               About
             </Link>
-            <Link to="/projects" className="text-gray-600 hover:text-primary transition-colors">
-              Projects
+            <Link to="/works" className="text-gray-600 hover:text-primary transition-colors">
+              My Works
             </Link>
             <Link to="/contact" className="text-gray-600 hover:text-primary transition-colors">
               Contact
             </Link>
+            <a
+              href={resumePDF}
+              download="AMITH HEGDE.pdf"
+              className="px-4 py-2 text-primary border-2 border-primary rounded-lg hover:bg-primary hover:text-white transition-colors"
+            >
+              Download Resume
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -54,8 +62,15 @@ function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/" className="block px-3 py-2 text-gray-600 hover:text-primary">Home</Link>
             <Link to="/about" className="block px-3 py-2 text-gray-600 hover:text-primary">About</Link>
-            <Link to="/projects" className="block px-3 py-2 text-gray-600 hover:text-primary">Projects</Link>
+            <Link to="/works" className="block px-3 py-2 text-gray-600 hover:text-primary">My Works</Link>
             <Link to="/contact" className="block px-3 py-2 text-gray-600 hover:text-primary">Contact</Link>
+            <a
+              href={resumePDF}
+              download="AMITH HEGDE.pdf"
+              className="block px-3 py-2 text-gray-600 hover:text-primary"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
       )}
